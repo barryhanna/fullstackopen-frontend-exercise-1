@@ -1,8 +1,12 @@
-const Content = ({ part, exercise }) => {
+import Part from './Part';
+
+const Content = ({ parts, exercises }) => {
 	return (
-		<p>
-			{part}, {exercise}
-		</p>
+		<>
+			{parts.map((part, i) => (
+				<Part part={part} exercise={exercises[i]} />
+			))}
+		</>
 	);
 };
 
